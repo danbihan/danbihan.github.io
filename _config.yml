@@ -2,7 +2,7 @@
 title: DanBi Han
 description: Personal website
 keywords: blog, Jekyll, github, gh-pages
-baseurl: # IS THIS THE RIGHT BASE URL???
+baseurl: /
 url: https://danbihan.github.io
 img_path: /static/assets/img/blog # I DON'T HAVE STATIC FOLDER!!!
 

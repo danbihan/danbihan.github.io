@@ -10,8 +10,8 @@ permalink: /404.html
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 Error</title>
     <!-- Mainly CSS -->
-    <link href="{{ "/static/assets/app-20210315.min.css" | prepend: site.url }}" rel="stylesheet">
-    <link href="{{ "/static/css/custom.css" | prepend: site.url }}" rel="stylesheet">
+    <link href="{{ "/static/assets/app-20210315.min.css" | prepend: site.baseurl }}" rel="stylesheet">
+    <link href="{{ "/static/css/custom.css" | prepend: site.baseurl }}" rel="stylesheet">
 </head>
 <body class="gray-bg">
     <div class="middle-box text-center animated fadeInDown">
@@ -22,12 +22,12 @@ permalink: /404.html
             The requested page could not be found.
             </p>
             <div>
-                <a class="btn btn-primary" href="{{ "/" | prepend: site.url }}">Home</a>
+                <a class="btn btn-primary" href="{{ "/" | prepend: site.baseurl }}">Home</a>
             </div>
         </div>
     </div>
     <!-- Mainly scripts -->
-    <script src="{{"/static/assets/app-20210315.min.js"| prepend: site.url }}"></script>
+    <script src="{{"/static/assets/app-20210315.min.js"| prepend: site.baseurl }}"></script>
     
 </body>
 </html>
