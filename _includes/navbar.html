@@ -1,5 +1,4 @@
-
-<nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light">
 
   <a class="navbar-brand px-3" href="#">
     <img src="/favicon.ico" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -13,22 +12,36 @@
   <div class="collapse navbar-collapse px-3" id="navbarNav">
     <ul class="navbar-nav ml-auto">
 
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          About
-        </a>
+      <li class="nav-item dropdown px-1">
+        {% if page.title == "About" %}
+          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            About
+          </a>
+        {% else %}
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            About
+          </a>
+        {% endif %}
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="#">Work</a>
           <a class="dropdown-item" href="#">Hobbies</a>
         </div>
       </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="#">Projects</a>
+      <li class="nav-item px-1"></li>
+        {% if page.title == "Projects" %}
+          <a class="nav-link active" href="#">Projects</a>
+        {% else %}
+          <a class="nav-link" href="#">Projects</a>
+        {% endif %}
       </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="#">Study w/ Me</a>
+      <li class="nav-item px-1"></li>
+        {% if page.title == "Notes" %}
+          <a class="nav-link active" href="#">Study w/ Me</a>
+        {% else %}
+          <a class="nav-link" href="#">Study w/ Me</a>
+        {% endif %}
       </li>
 
     </ul>
