@@ -9,7 +9,7 @@
 
 .navbar.scrolled { 
   
-  background: #eefbff
+  background: #f3fbff
 }
 
 /* Landing page hero image */
@@ -32,4 +32,42 @@
   font-family:'Trebuchet MS', sans-serif; 
   position: relative; 
   top:-5px;
+}
+
+/* Rest of landing page sections */
+.section-title {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.section-title h1 {
+  font-size: 20px;
+  color: #636C73;
+  margin-top: 5px;
+  margin-bottom: 50px;
+}
+
+.title-overline {
+  width: 60px;
+  height: 1px;
+  margin: 20px auto 0;
+  border-bottom: 2px solid #2693fa;
+}
+
+.content span {
+  color: #2694fa;
+  font-weight: 700;
+}
+
+.content ul span {
+  color: #e7abe7
+}
+
+.btn-outline-primary {
+  border-radius: 30%;
+  color: #2694fa;
+}
+
+.btn-outline-primary:hover {
+  background-color: #2694fa;
 }
