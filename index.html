@@ -22,8 +22,8 @@ title: Home
       <h1>About Me</h1>
     </div>
 
-    <div class="row">
-      <div class="col-lg-6">
+    <div class="row" style="margin-left:30px; padding-bottom:40px;">
+      <div class="col-lg-6" style="margin-right:-30px;">
         <img src="/static/profile.jpg" class="img-fluid shadow" style="border-radius:30%; width:75%;">
       </div>
 
@@ -71,7 +71,6 @@ title: Home
       <h1>Experience</h1>
     </div>
 
-    <!-- Start timeline -->
     <div class="timeline">
       {% for job in site.data.experience %}
         {% assign index = forloop.index | modulo: 2 %}
@@ -98,21 +97,66 @@ title: Home
         </div>
       {% endfor %}
     </div>
-    <!-- End timeline-->
   </div>
 </section>
 
 
 
-<!-- Education -->
+<!-- Education & Skills -->
 <section class="about">
   <div class="container">
 
     <div class="section-title text-center">
       <div class="title-overline"></div>
-      <h1>Education</h1>
+      <h1>Education & Skills</h1>
     </div>
 
+    <div class="row">
+      <div class="col-lg-6 d-flex justify-content-center">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+
+            <div class="flip-card-front shadow">
+              <div class="container">
+                <h1>Bachelor of Arts '21</h1> 
+              </div>
+              <img src="/static/upenn.png">
+              <div class="container">
+                <h2>University of Pennsylvania</h2> 
+                <ul>
+                  <li>Major: <span style="color:#990000">Economics</span></li>
+                  <li>Minors: <span style="color:#011F5B">Mathematics</span>, <span style="color:#011F5B">Statistics</span></li>
+                </ul> 
+              </div>
+            </div>
+
+            <div class="flip-card-back shadow">
+              <h1>Relevant Coursework</h1>
+              <ul>
+                <li>Linear Algebra</li>
+                <li>Real Analysis</li>
+                <li>ODEs & PDEs</li>
+                <div class="red-line"></div>
+                <li>Bayesian Data Analysis</li>
+                <li>Stochastic Processes</li>
+                <li>Time Series Analysis</li>
+                <li>Econometrics</li>
+                <li>Numerical Methods</li>
+                <div class="blue-line"></div>
+                <li>Big Data Analytics</li>
+                <li>Data Mining</li>
+                <li>Brain-Computer Interface</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+
+      </div>
+
+    </div>
   </div>
 </section>
 
