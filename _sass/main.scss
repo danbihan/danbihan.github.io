@@ -60,7 +60,7 @@ html {
   General section styles 
   ######################*/
 .about {
-  padding-bottom: 40px;
+  padding-bottom: 30px;
 }
 
 .section-bg {
@@ -114,31 +114,48 @@ html {
 /*################## 
   Experience section 
   ##################*/
-.timeline {
+/* --- Stem --- */
+.stem {
   position: relative;
   margin-top: 100px;
+  &:before {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 100%;
+    background: var(--green);
+    margin: 0 auto;
+    position: absolute;
+    top: -80px;
+    left: 0;
+    right: 0
+  }
 }
 
-.timeline:before {
+.stem-bottom {
+  position: relative;
+  padding-bottom: 60px;
+  &:before {
   content: "";
   display: block;
   width: 2px;
-  height: 120%;
+  height: 40%;
   background: var(--green);
   margin: 0 auto;
   position: absolute;
-  top: -80px;
+  bottom: 0;
   left: 0;
   right: 0
+  }
 }
 
-/* --- Stem --- */
-.timeline .stem {
+/* --- Shoot --- */
+.stem .shoot {
   margin-bottom: 100px;
   position: relative
 }
 
-.timeline .stem {
+.stem .shoot {
   &:after {
   content: "";
   display: block;
@@ -149,7 +166,7 @@ html {
 }
 
 /* --- Node --- */
-.timeline .node {
+.stem .node {
   width: 18px;
   height: 18px;
   position: absolute;
@@ -164,9 +181,9 @@ html {
 }
 
 /* --- Petiole --- */
-.timeline .petiole {
+.stem .petiole {
   width: 200px;
-  position: absolute; // fix wrt stem div
+  position: absolute; // fix wrt shoot div
   margin: 0;
   top: 50%;
   right: 50%;
@@ -175,30 +192,30 @@ html {
   background: var(--green);
 }
 
-.timeline .stem:nth-child(2n) .petiole {
+.stem .shoot:nth-child(2n) .petiole {
   left: 50%;
 }
 
 /* --- Leaf --- */
-.timeline .leaf {
+.stem .leaf {
   width: 200px;
   height: 150px;
   background: #d9f1b5; /*E3FFCB*/
   border: 2px solid var(--green);
   border-radius: 150px 0;
-  position: absolute; // fix wrt stem div
+  position: absolute; // fix wrt shoot div
   margin: 0;
   top: 50%;
   right: 50%;
   transform: translate(-30%, -70%) rotate(-130deg);
 }
 
-.timeline .stem:nth-child(2n) .leaf {
+.stem .shoot:nth-child(2n) .leaf {
   left: 50%;
   transform: translate(30%, -70%) rotate(20deg);
 }
 
-.timeline .leaf-content-title {
+.stem .leaf-content-title {
   width: 75%;
   position: absolute;
   margin: 0;
@@ -213,27 +230,27 @@ html {
   }
 }
 
-.timeline .stem:nth-child(2n) .leaf-content-title {
+.stem .shoot:nth-child(2n) .leaf-content-title {
   left: 50%;
   transform: translate(45%, -80%);
 }
 
-.timeline .leaf-content-company {
+.stem .leaf-content-company {
   width: 40%;
-  position: absolute; // fix wrt stem div
+  position: absolute; // fix wrt shoot div
   margin: 0;
   top: 50%;
   right: 50%;
   transform: translate(85%, -60%);
 }
 
-.timeline .stem:nth-child(2n) .leaf-content-company {
+.stem .shoot:nth-child(2n) .leaf-content-company {
   left: 50%;
   transform: translate(-85%, -60%);
 }
 
 /* --- The details --- */
-.timeline .details {
+.stem .details {
   width: 50%;
   padding: 0 30px 0 30px;
   float: right;
@@ -253,7 +270,7 @@ html {
   }
 }
 
-.timeline .stem:nth-child(2n) .details {
+.stem .shoot:nth-child(2n) .details {
   float: left;
   text-align: right
 }

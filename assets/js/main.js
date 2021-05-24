@@ -1,3 +1,6 @@
+---
+---
+
 /*###########################
   Navbar transition on scroll 
   ###########################*/
@@ -62,7 +65,68 @@ $(document).ready(function() {
   });
 });
 
-/*###########
-  MDBootstrap
-  ###########*/
+/*###############################
+  MDBootstrap (animate on scroll)
+  ###############################*/
 new WOW().init();
+
+/*###########
+  Radar Chart
+  ###########*/
+
+/* Set-up */
+const data = {
+  labels: [
+    {% for item in site.data.skills %}'{{ item.skill }}',{% endfor %}
+  ],
+  datasets: [{
+    label: 'Competency',
+    data: [
+      {% for item in site.data.skills %}'{{ item.level }}',{% endfor %}
+    ],
+    fill: true,
+    backgroundColor: '#cce4f150',
+    borderColor: '#2694fa',
+    pointBackgroundColor: '#2694fa',
+    pointBorderColor: '#fff',
+    pointHoverBackgroundColor: '#fff',
+    pointHoverBorderColor: '#2694fa',
+  }]
+};
+
+/* Config */
+const config = {
+  type: 'radar',
+  data: data,
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    pointLabelFontSize: 20,
+    elements: {
+      line: {borderWidth: 3}
+    },
+    plugins: {
+      legend: {display: false}
+    },
+    scales: {
+      r: {
+        angleLines: {
+            display: false
+        },
+        suggestedMin: 0,
+        suggestedMax: 5,
+        pointLabels: {
+          font: {
+            size: 15,
+          }
+        }
+      },
+    }
+  }
+};
+
+/* Render chart */
+var myRadarChart = new Chart(
+  document.getElementById('myRadarChart'),
+  config,
+);

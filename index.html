@@ -63,7 +63,7 @@ title: Home
 
 
 <!-- Experience -->
-<section id="work" class="about section-bg" style="padding-bottom:100px;">
+<section id="work" class="about section-bg stem-bottom">
   <div class="container">
 
     <div class="section-title text-center">
@@ -71,10 +71,10 @@ title: Home
       <h1>Experience</h1>
     </div>
 
-    <div class="timeline">
+    <div class="stem">
       {% for job in site.data.experience %}
         {% assign index = forloop.index | modulo: 2 %}
-        <div class="stem">
+        <div class="shoot">
           <div class="node"></div>
 
           <div class="petiole wow 
@@ -103,7 +103,7 @@ title: Home
 
 
 <!-- Education & Skills -->
-<section class="about">
+<section class="about" style="padding-bottom:50px;">
   <div class="container">
 
     <div class="section-title text-center">
@@ -112,6 +112,8 @@ title: Home
     </div>
 
     <div class="row">
+
+      <!-- Education -->
       <div class="col-lg-6 d-flex justify-content-center">
         <div class="flip-card">
           <div class="flip-card-inner">
@@ -152,8 +154,9 @@ title: Home
         </div>
       </div>
 
-      <div>
-
+      <!-- Skills -->
+      <div class="col-lg-6 d-flex justify-content-center" style="margin-bottom:20px;">
+        <canvas id="myRadarChart" height="300" width="300" class="wow zoomIn"></canvas>
       </div>
 
     </div>
@@ -169,6 +172,12 @@ title: Home
     <div class="section-title text-center">
       <div class="title-overline"></div>
       <h1>Fun Facts</h1>
+      <p style="text-align:center">Under construction...</p>
+      <!-- 
+      https://www.bootdey.com/snippets/view/simple-horizontal-timeline 
+      Replace date with icons, representing my hobbies (scenic photog, drawing, writing, my name, bookshelf)
+      Add links to Insta or Google Photos
+      -->
     </div>
 
   </div>
