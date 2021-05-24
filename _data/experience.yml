@@ -1,0 +1,21 @@
+# List new experience first
+- title: Data Scientist
+  company: 84.51°
+  date: June 2021 - Present
+  loc: Chicago, IL
+  desc: <span>Coming soon!</span>
+  img_name: 84_51.png
+  
+- title: Data Science Intern
+  company: Gopuff
+  date: June 2020 - May 2021
+  loc: Philadelphia, PA
+  desc: 
+    <span>Built predictive model</span> for driver churn.
+    <span>Conducted power analysis</span> to generate random samples for microforecasting experiment.
+    <span>Performed changepoint analysis</span> to determine critical thresholds of weather events in
+    order volume forecast.
+    <span>Wrote Python module</span> that integrates Uber's Orbit model as a candidate in
+    ensemble forecaster.
+    <span>Investigated effect</span> of stimulus checks on order volume forecast.
+  img_name: gopuff.png

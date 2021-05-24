@@ -1,4 +1,6 @@
-/* Navbar transition on scroll */
+/*###########################
+  Navbar transition on scroll 
+  ###########################*/
  function checkScroll(){
   var startY = $('.navbar').height() * 5; //The point where the navbar changes in px
 
@@ -15,7 +17,9 @@ if($('.navbar').length > 0){
   });
 }
 
-/* Copy to clipboard on click */
+/*##########################
+  Copy to clipboard on click
+  ##########################*/
 function copyToClipboard(text, el) {
   var copyTest = document.queryCommandSupported('copy');
   var elOriginalText = el.attr('data-original-title');
@@ -57,3 +61,8 @@ $(document).ready(function() {
     copyToClipboard(text, el);
   });
 });
+
+/*###########
+  MDBootstrap
+  ###########*/
+new WOW().init();

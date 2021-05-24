@@ -1,0 +1,275 @@
+
+/*################## 
+  Define main colors 
+  ##################*/
+:root {
+  --blue: #2694fa;
+  --pink: #ee95cc;
+  --green: #B0E465;
+}
+
+/*################
+  Smooth scrolling
+  ################*/
+html {
+  scroll-behavior: smooth;
+}
+
+/*########################################### 
+  Navbar transition fron transparent to color 
+  ###########################################*/
+.navbar {
+  box-shadow: none !important;
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  -ms-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+.navbar.scrolled { 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.22) !important;
+  background: #f3fbff
+}
+
+/*####################### 
+  Landing page hero image 
+  #######################*/
+#hero {
+  width: 100%;
+  height: 75vh;
+  background: url("/static/landing.jpg") top right;
+  background-size: cover;
+  position: relative;
+}
+
+#hero h1 {
+  color:white; 
+  font-size:57px
+}
+
+#hero p {
+  color:black;
+  font-size:20px; 
+  font-family:'Trebuchet MS', sans-serif; 
+  position: relative; 
+  top:-7px;
+}
+
+/*###################### 
+  General section styles 
+  ######################*/
+.about {
+  padding-bottom: 40px;
+}
+
+.section-bg {
+  background-color: #f3f6f7;
+}
+
+.section-title {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.section-title h1 {
+  font-size: 20px;
+  color: #636C73;
+  margin-top: 5px;
+  margin-bottom: 50px;
+}
+
+.title-overline {
+  width: 60px;
+  height: 1px;
+  margin: 20px auto 0;
+  border-bottom: 2px solid var(--blue);
+}
+
+/*################
+  About Me section 
+  ################*/
+.content span {
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.content ul span {
+  color: var(--pink)
+}
+
+.btn-outline-primary {
+  border-radius: 30%;
+  color: var(--blue) !important;
+  padding: 10px !important;
+  font-size: 16px !important;
+  text-transform: unset !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--blue) !important;
+  color: white !important;
+}
+
+/*################## 
+  Experience section 
+  ##################*/
+.timeline {
+  position: relative;
+  margin-top: 100px;
+}
+
+.timeline:before {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 120%;
+  background: var(--green);
+  margin: 0 auto;
+  position: absolute;
+  top: -80px;
+  left: 0;
+  right: 0
+}
+
+/* --- Stem --- */
+.timeline .stem {
+  margin-bottom: 100px;
+  position: relative
+}
+
+.timeline .stem {
+  &:after {
+  content: "";
+  display: block;
+  clear: both
+  }
+  &:last-child {
+  margin-bottom: 0;}
+}
+
+/* --- Node --- */
+.timeline .node {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background: #fff;
+  border: 2px solid #232323;
+  border-radius: 50%;
+}
+
+/* --- Petiole --- */
+.timeline .petiole {
+  width: 200px;
+  position: absolute; // fix wrt stem div
+  margin: 0;
+  top: 50%;
+  right: 50%;
+  transform: translate(0%, -50%);
+  height: 2px;
+  background: var(--green);
+}
+
+.timeline .stem:nth-child(2n) .petiole {
+  left: 50%;
+}
+
+/* --- Leaf --- */
+.timeline .leaf {
+  width: 200px;
+  height: 150px;
+  background: #d9f1b5; /*E3FFCB*/
+  border: 2px solid var(--green);
+  border-radius: 150px 0;
+  position: absolute; // fix wrt stem div
+  margin: 0;
+  top: 50%;
+  right: 50%;
+  transform: translate(-30%, -70%) rotate(-130deg);
+}
+
+.timeline .stem:nth-child(2n) .leaf {
+  left: 50%;
+  transform: translate(30%, -70%) rotate(20deg);
+}
+
+.timeline .leaf-content-title {
+  width: 75%;
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  right: 50%;
+  transform: translate(-45%, -90%);
+  text-align: center;
+  h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #84ac4c;
+  }
+}
+
+.timeline .stem:nth-child(2n) .leaf-content-title {
+  left: 50%;
+  transform: translate(45%, -80%);
+}
+
+.timeline .leaf-content-company {
+  width: 40%;
+  position: absolute; // fix wrt stem div
+  margin: 0;
+  top: 50%;
+  right: 50%;
+  transform: translate(85%, -60%);
+}
+
+.timeline .stem:nth-child(2n) .leaf-content-company {
+  left: 50%;
+  transform: translate(-85%, -60%);
+}
+
+/* --- The details --- */
+.timeline .details {
+  width: 50%;
+  padding: 0 30px 0 30px;
+  float: right;
+  h3 {
+    font-size: 15px;
+    margin: 0;
+    font-weight: 600;
+    color: #636C73;
+  }
+  p {
+    margin: 0;
+    padding-top: 10px;
+    span {
+      color: var(--blue);
+      font-weight: 700;
+    }
+  }
+}
+
+.timeline .stem:nth-child(2n) .details {
+  float: left;
+  text-align: right
+}
+
+#location .text {
+  position: absolute;
+  visibility: hidden;
+  }
+  
+#location:hover .text {
+visibility: visible;
+color: var(--pink);
+font-weight: 700;
+font-size: 14.5px;
+margin-top: 5px;
+width: 150%;
+text-align: center;
+left: -20px;
+}

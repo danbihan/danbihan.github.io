@@ -5,15 +5,17 @@ title: Home
 
 <!-- Hero -->
 <section id="hero" class="d-flex align-items-center">
-  <div class="container" style="padding-top: 35px" data-aos="zoom-out" data-aos-delay="100">
+  <div class="container" style="padding-top: 40px">
     <h1>DanBi Han</h1>
     <p>Welcome to my website!</p>
   </div>
 </section>
 
+
+
 <!-- About me -->
-<section id="work" class="about">
-  <div class="container" data-aos="fade-up">
+<section class="about">
+  <div class="container">
 
     <div class="section-title text-center">
       <div class="title-overline"></div>
@@ -22,27 +24,30 @@ title: Home
 
     <div class="row">
       <div class="col-lg-6">
-        <img src="/static/profile.jpg" class="img-fluid" style="border-radius:30%; width:75%;">
+        <img src="/static/profile.jpg" class="img-fluid shadow" style="border-radius:30%; width:75%;">
       </div>
 
-      <div class="col-lg-6 content d-flex flex-column justify-content-center">
-        <h2>Hi, I'm DanBi <i class="far fa-smile"></i></h2>
+      <div class="col-lg-6 content d-flex flex-column justify-content-center" style="margin-top:5px">
+        <h2 style="font-weight:500">Hi, I'm DanBi <i class="far fa-smile"></i></h2>
+
         <p>
           I recently started my career as a <span>data scientist</span> after graduating from the University of Pennsylvania in May 2021.
           Some things I enjoy include:
         </p>
+
         <ul>
           <li><span>learning</span> from others</li>
           <li>trying new <span>arts & crafts</span></li>
           <li><span>organizing</span> everything I learn into notes</li>
         </ul>
-        <div class="text-center" style="margin-top:40px">
-          <a href="/static/resume.pdf" class="btn btn-outline-primary" role="button"><i class="far fa-file"></i> Resume</a>
-          <a href="https://www.linkedin.com/in/danbi-han-371247155/" class="btn btn-outline-primary" role="button"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
-          <a href="https://github.com/danbihan" class="btn btn-outline-primary" role="button"><i class="fab fa-github"></i> GitHub</a>
+
+        <div class="text-center" style="margin-top:30px">
+          <a href="/static/resume.pdf" class="btn btn-md btn-outline-primary" role="button"><i class="far fa-file"></i> Resume</a>
+          <a href="https://www.linkedin.com/in/danbi-han-371247155/" class="btn btn-md btn-outline-primary" role="button"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+          <a href="https://github.com/danbihan" class="btn btn-md btn-outline-primary" role="button"><i class="fab fa-github"></i> GitHub</a>
           <button 
             type="button" 
-            class="btn btn-outline-primary js-tooltip js-copy" 
+            class="btn btn-md btn-outline-primary js-tooltip js-copy" 
             data-toggle="tooltip" 
             data-placement="bottom"
             data-copy="danbihan98@gmail.com"
@@ -56,12 +61,71 @@ title: Home
 </section>
 
 
-<!-- Career -->
+
+<!-- Experience -->
+<section id="work" class="about section-bg" style="padding-bottom:100px;">
+  <div class="container">
+
+    <div class="section-title text-center">
+      <div class="title-overline"></div>
+      <h1>Experience</h1>
+    </div>
+
+    <!-- Start timeline -->
+    <div class="timeline">
+      {% for job in site.data.experience %}
+        {% assign index = forloop.index | modulo: 2 %}
+        <div class="stem">
+          <div class="node"></div>
+
+          <div class="petiole wow 
+            {% if 1 == index %}rotateInUpRight
+            {% else %}rotateInUpLeft{% endif %}" 
+            data-wow-duration="2s"
+          >
+            <div class="leaf"></div>
+            <div class="leaf-content-title"><h2>{{ job.title }}</h2></div>
+            <div class="leaf-content-company" id="location">
+              <img src="/static/{{ job.img_name }}" class="img-fluid hover">
+              <p class="text">{{ job.company }} @ {{ job.loc }}</p>
+            </div>
+          </div>
+
+          <div class="details">
+            <h3>{{ job.date }}</h3>
+            <p>{{ job.desc }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <!-- End timeline-->
+  </div>
+</section>
 
 
 
 <!-- Education -->
+<section class="about">
+  <div class="container">
+
+    <div class="section-title text-center">
+      <div class="title-overline"></div>
+      <h1>Education</h1>
+    </div>
+
+  </div>
+</section>
 
 
 
 <!-- Fun facts -->
+<section id="hobbies" class="about section-bg">
+  <div class="container">
+
+    <div class="section-title text-center">
+      <div class="title-overline"></div>
+      <h1>Fun Facts</h1>
+    </div>
+
+  </div>
+</section>
