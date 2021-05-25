@@ -464,17 +464,13 @@ left: -20px;
         font-weight: 700;
       }
     }
-    .btn-outline-primary {
-      border-radius: 30%;
-      background-color: var(--blue) !important;
+    .btn-primary {
       color: white !important;
+      background-color: var(--blue) !important;
+      border-radius: 30%;
       padding: 10px !important;
       font-size: 15px !important;
       text-transform: unset !important;
-      &:hover {
-        color: var(--blue) !important;
-        background-color: white !important;
-      }
     }
   }
 }

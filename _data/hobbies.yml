@@ -13,7 +13,7 @@
     I like to draw in my free time. Here is my drawing of a <span>piña colada</span> cocktail.
     Another fun fact? I don't drink alcohol.
   button: See gallery
-  link: #
+  link: /construction
   icon_html: <i class="fas fa-palette fa-2x"></i>
 
 - name: Writing
@@ -22,7 +22,7 @@
     I write (random) things from time to time. My favorites are usually <span>short stories</span>, but 
     I also secretly aspire to be a K-drama screenwriter.
   button: See stories
-  link: #
+  link: /construction
   icon_html: <i class="fas fa-pencil-alt fa-2x"></i>
 
 - name: Bookshelf
@@ -31,5 +31,5 @@
     One of my favorite books is <span><i>The Little Prince</i></span> by Saint-Ex. I've read it 
     multiple times in English, Korean, and French.
   button: See bookshelf
-  link: #
+  link: /construction
   icon_html: <i class="fas fa-book fa-2x"></i>
