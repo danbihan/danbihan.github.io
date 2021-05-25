@@ -1,6 +1,6 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-light">
 
-  <a class="navbar-brand px-3" href={% if page.title == "Home" %}"#"{% else %}"{{ site.baseurl }}"{% endif %}>
+  <a class="navbar-brand px-3" href={% if page.title == "Home" %}"#"{% else %}"{{ site.url }}"{% endif %}>
     <img src="/favicon.ico" width="30" height="30" class="d-inline-block align-top">
     Home
   </a>
@@ -23,24 +23,24 @@
           </a>
         {% endif %}
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href={% if page.title == "Home" %}"#work"{% else %}"{{ site.url | append: #work }}"{% endif %}>Work</a>
-          <a class="dropdown-item" href={% if page.title == "Home" %}"#hobbies"{% else %}"{{ site.url | append: #hobbies }}"{% endif %}>Hobbies</a>
+          <a class="dropdown-item" href={% if page.title == "Home" %}"#work"{% else %}"{{ site.url | append: "#work" }}"{% endif %}>Work</a>
+          <a class="dropdown-item" href={% if page.title == "Home" %}"#hobbies"{% else %}"{{ site.url | append: "#hobbies" }}"{% endif %}>Hobbies</a>
         </div>
       </li>
 
       <li class="nav-item px-1"></li>
         {% if page.title == "Projects" %}
-          <a class="nav-link active" href={% if page.title == "Home" %}"#projects"{% else %}"{{ site.url | append: #projects }}"{% endif %}>Projects</a>
+          <a class="nav-link active" href={% if page.title == "Home" %}"/projects"{% else %}"{{ site.url | append: "projects" }}"{% endif %}>Projects</a>
         {% else %}
-          <a class="nav-link" href={% if page.title == "Home" %}"#projects"{% else %}"{{ site.url | append: #projects }}"{% endif %}>Projects</a>
+          <a class="nav-link" href={% if page.title == "Home" %}"/projects"{% else %}"{{ site.url | append: "projects" }}"{% endif %}>Projects</a>
         {% endif %}
       </li>
 
       <li class="nav-item px-1"></li>
         {% if page.title == "Notes" %}
-          <a class="nav-link active" href={% if page.title == "Home" %}"#notes"{% else %}"{{ site.url | append: #notes }}"{% endif %}>Study w/ Me</a>
+          <a class="nav-link active" href={% if page.title == "Home" %}"/notes"{% else %}"{{ site.url | append: "notes" }}"{% endif %}>Study w/ Me</a>
         {% else %}
-          <a class="nav-link" href={% if page.title == "Home" %}"#notes"{% else %}"{{ site.url | append: #notes }}"{% endif %}>Study w/ Me</a>
+          <a class="nav-link" href={% if page.title == "Home" %}"/notes"{% else %}"{{ site.url | append: "notes" }}"{% endif %}>Study w/ Me</a>
         {% endif %}
       </li>
 
