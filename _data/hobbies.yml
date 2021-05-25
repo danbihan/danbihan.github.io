@@ -1,0 +1,35 @@
+- name: This website
+  img_name: landing.jpg
+  desc: 
+    1) Why is the logo a water droplet? I drew it as such because my name means <span>"sweet rain"</span> in Korean.<br><br>
+    2) The image at the top is a photo of the <span>Grand Canyon</span> that I took back in 2017.
+  button: false
+  link: #
+  icon_html: <img src="/favicon.ico" width="32" height="32">
+
+- name: Drawing
+  img_name: sample_drawing.png
+  desc: 
+    I like to draw in my free time. Here is my drawing of a <span>piña colada</span> cocktail.
+    Another fun fact? I don't drink alcohol.
+  button: See gallery
+  link: #
+  icon_html: <i class="fas fa-palette fa-2x"></i>
+
+- name: Writing
+  img_name: write.jpg
+  desc: 
+    I write (random) things from time to time. My favorites are usually <span>short stories</span>, but 
+    I also secretly aspire to be a K-drama screenwriter.
+  button: See stories
+  link: #
+  icon_html: <i class="fas fa-pencil-alt fa-2x"></i>
+
+- name: Bookshelf
+  img_name: book.jpg
+  desc: 
+    One of my favorite books is <span><i>The Little Prince</i></span> by Saint-Ex. I've read it 
+    multiple times in English, Korean, and French.
+  button: See bookshelf
+  link: #
+  icon_html: <i class="fas fa-book fa-2x"></i>

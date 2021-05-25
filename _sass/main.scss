@@ -6,6 +6,7 @@
   --blue: #2694fa;
   --pink: #ee95cc;
   --green: #B0E465;
+  --dark-gray: #636C73
 }
 
 /*################
@@ -74,7 +75,7 @@ html {
 
 .section-title h1 {
   font-size: 20px;
-  color: #636C73;
+  color: var(--dark-gray);
   margin-top: 5px;
   margin-bottom: 50px;
 }
@@ -258,7 +259,7 @@ html {
     font-size: 15px;
     margin: 0;
     font-weight: 600;
-    color: #636C73;
+    color: var(--dark-gray);
   }
   p {
     margin: 0;
@@ -329,7 +330,7 @@ left: -20px;
   padding-top:20px;
   padding-bottom: 20px;
   h1 {
-    color: #636C73;
+    color: var(--dark-gray);
     font-size: 17px;
     font-weight: 700;
   }
@@ -339,7 +340,7 @@ left: -20px;
     margin-bottom: 10px;
   }
   h2 {
-    color: #636C73;
+    color: var(--dark-gray);
     font-size: 15px;
     font-style: italic;
     margin-bottom: 20px;
@@ -360,7 +361,7 @@ left: -20px;
   transform: rotateY(180deg);
   padding-top:20px;
   h1 {
-    color: #636C73;
+    color: var(--dark-gray);
     font-size: 17px;
     font-weight: 700;
     text-align: center;
@@ -384,5 +385,96 @@ left: -20px;
     background: repeating-linear-gradient(
       to right,#011F5B 0,#011F5B 10px,transparent 10px,transparent 12px
       );
+  }
+}
+
+/*###############
+  Hobbies section
+  ###############*/
+#hobbies .row {
+  padding: 0 100px;
+  .horizontal-line {
+    width: 100%;
+    position: relative;
+    margin: 20px;
+    top: -15px;
+    height: 3px;
+    background: #9e6b3b9a//#dee2e6;
+  }
+  .vertical-line {
+    width: 25%;
+    max-height: 250px;
+    position: relative;
+    float: left;
+    margin-top: 0;
+    text-align: center;
+    &:before {
+      content: "";
+      display: block;
+      width: 2px;
+      height: 50px;
+      background: var(--green);
+      margin: 0 auto;
+      position: absolute;
+      top: -35px;
+      left: 0;
+      right: 0
+    }
+  }
+}
+
+.hobbies-icon {
+  color: var(--blue);
+  margin: -70px 0 40px;
+  z-index: 1;
+  position: relative;
+}
+
+#hobbies {
+  .flip-card {
+    margin-top: -10px;
+    margin-left: 12.5%;
+    padding: 0px;
+    width: 75%;
+  }
+  .flip-card-inner {
+    width: 100%;
+    height: 75%;
+    position: relative;
+    transition: transform 0s;
+  }
+  .flip-card-front {
+    background-color: transparent;
+    img {
+      max-height: 100%;
+      max-width: 100%;
+      margin-top: 0;
+      border-radius: 20%;
+    }
+  }
+  .flip-card-back {
+    background-color: transparent;
+    width: 110%;
+    left: -5%;
+    p {
+      font-size: 15px;
+      padding-top: 10px;
+      span {
+        color: var(--blue);
+        font-weight: 700;
+      }
+    }
+    .btn-outline-primary {
+      border-radius: 30%;
+      background-color: var(--blue) !important;
+      color: white !important;
+      padding: 10px !important;
+      font-size: 15px !important;
+      text-transform: unset !important;
+      &:hover {
+        color: var(--blue) !important;
+        background-color: white !important;
+      }
+    }
   }
 }
