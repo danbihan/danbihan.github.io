@@ -1,0 +1,145 @@
+// Style for notes pages
+
+/*##################
+  Navbar text colors
+  ##################*/
+/*--- Transparent at top ---*/
+.nav-link {
+  color: #e3cfb7 !important;
+  &:hover {
+    color: #f1e4d3 !important;
+  }
+}
+
+.navbar-brand {
+  color: white !important;
+}
+
+.active {
+  color: white !important;
+  &:hover {
+    color: #f1e4d3 !important;
+  }
+}
+
+/*--- Scrolled down ---*/
+.nav-link.scrolled {
+  color: #00000080 !important;
+  &:hover {
+    color: #6b6d70 !important;
+  }
+}
+
+.navbar-brand.scrolled {
+  color: #000000e6 !important;
+}
+
+.active.scrolled {
+  color: #000000e6 !important;
+  &:hover {
+  color: #6b6d70 !important;
+  }
+}
+
+/*##########
+  Hero image
+  ##########*/
+#hero {
+  width: 100%;
+  height: 75vh;
+  background: url("/static/study.jpg") top right;
+  background-size: cover;
+  position: relative;
+  h1 {
+    color: white; 
+    font-size: 40px;
+  }
+  p {
+    color: #e3cfb7;
+    font-size: 17px; 
+    font-family:'Trebuchet MS', sans-serif; 
+    position: relative; 
+    top: -5px;
+  }
+}
+
+
+
+/*########
+  Subjects
+  ########*/
+body {
+  background: radial-gradient(circle, transparent 0%, black 500%), white
+  //box-shadow: inset 0 0 100px #4d3124;
+}
+.notes {
+  margin-top: 40px;
+}
+.notes-by-subjects{
+  flex: 0 1 calc(100% - 280px);
+  padding-right: 5rem;
+}
+
+.subject {
+  margin-bottom: 60px;
+  h1 {
+    text-transform: capitalize;
+    font-size: 25px;
+  }
+  .card {
+    background-color: #9b4816c7;
+  }
+  .btn {
+    text-align: left;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: none;
+  }
+}
+
+.table {
+  margin-bottom: 0;
+  td {
+    background-color: white;
+    padding-left: 40px;
+  }
+  a {
+    display:block;
+    width:100%;
+  }
+}
+
+/*###
+  ToC
+  ###*/
+.toc {
+  background-color: #D99C5F;
+  height: fit-content;
+  padding: 1rem 2rem;
+  height: fit-content;
+  margin-top: 35px;
+  margin-bottom: 0px;
+  text-align: center;
+  border-radius: 2%;
+  h1 {
+    font-family:'Trebuchet MS', sans-serif; 
+    font-size: 20px
+  }
+  ul {
+    text-align: left;
+    margin-top: 0;
+    a {
+      color: white;
+      font-size: 17px;
+    }
+  }
+}
+
+.toc-index-container {
+  flex: 0 1 280px;
+  position: sticky;
+  top: 60px;
+  height: fit-content;
+}
+

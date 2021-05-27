@@ -1,4 +1,23 @@
+#--- Set-up ---#
 title: DanBi Han
 description: DanBi Han's personal website
 baseurl:  /
-url: https://danbihan.github.io/
+url: https://danbihan.github.io/ #http://localhost:4000/ # 
+
+#--- Notes ---#
+# dictionary showing how notes are organized
+# {subject: [subtopics]}
+notes_dir:
+  mathematics: 
+    - topic1
+    - topic2
+  statistics:
+    - topic_a
+  machine_learning: null
+
+# Icon order must match the order of subjects above
+notes_icon: [
+  <i class="fas fa-calculator"></i>,
+  <i class="fas fa-dice"></i>,
+  <i class="fas fa-robot"></i>
+]

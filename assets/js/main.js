@@ -9,8 +9,14 @@
 
   if($(window).scrollTop() > startY){
       $('.navbar').addClass("scrolled");
+      $('.navbar-brand').addClass("scrolled");
+      $('.active').addClass("scrolled");
+      $('.nav-link').addClass("scrolled");
   }else{
       $('.navbar').removeClass("scrolled");
+      $('.navbar-brand').removeClass("scrolled");
+      $('.active').removeClass("scrolled");
+      $('.nav-link').removeClass("scrolled");
   }
 }
 

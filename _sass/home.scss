@@ -1,0 +1,453 @@
+// Style for home page
+
+/*################## 
+  Define main colors 
+  ##################*/
+:root {
+  --blue: #2694fa;
+  --pink: #ee95cc;
+  --green: #B0E465;
+  --dark-gray: #636C73;
+}
+
+/*####################### 
+  Landing page hero image 
+  #######################*/
+#hero {
+  width: 100%;
+  height: 75vh;
+  background: url("/static/landing.jpg") top right;
+  background-size: cover;
+  position: relative;
+}
+
+#hero h1 {
+  color:white; 
+  font-size:57px
+}
+
+#hero p {
+  color:black;
+  font-size:20px; 
+  font-family:'Trebuchet MS', sans-serif; 
+  position: relative; 
+  top:-7px;
+}
+
+/*###################### 
+  General section styles 
+  ######################*/
+.about {
+  padding-bottom: 30px;
+}
+
+.section-bg {
+  background-color: #f3f6f7;
+}
+
+.section-title {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.section-title h1 {
+  font-size: 20px;
+  color: var(--dark-gray);
+  margin-top: 5px;
+  margin-bottom: 50px;
+}
+
+.title-overline {
+  width: 60px;
+  height: 1px;
+  margin: 20px auto 0;
+  border-bottom: 2px solid var(--blue);
+}
+
+/*################
+  About Me section 
+  ################*/
+.content span {
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.content ul span {
+  color: var(--pink)
+}
+
+.btn-outline-primary {
+  border-radius: 30%;
+  color: var(--blue) !important;
+  padding: 10px !important;
+  font-size: 16px !important;
+  text-transform: unset !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--blue) !important;
+  color: white !important;
+}
+
+/*################## 
+  Experience section 
+  ##################*/
+/* --- Stem --- */
+.stem {
+  position: relative;
+  margin-top: 100px;
+  &:before {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 100%;
+    background: var(--green);
+    margin: 0 auto;
+    position: absolute;
+    top: -80px;
+    left: 0;
+    right: 0
+  }
+}
+
+.stem-bottom {
+  position: relative;
+  padding-bottom: 60px;
+  &:before {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 40%;
+  background: var(--green);
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0
+  }
+}
+
+/* --- Shoot --- */
+.stem .shoot {
+  margin-bottom: 100px;
+  position: relative
+}
+
+.stem .shoot {
+  &:after {
+  content: "";
+  display: block;
+  clear: both
+  }
+  &:last-child {
+  margin-bottom: 0;}
+}
+
+/* --- Node --- */
+.stem .node {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background: #fff;
+  border: 2px solid #232323;
+  border-radius: 50%;
+}
+
+/* --- Petiole --- */
+.stem .petiole {
+  width: 200px;
+  position: absolute; // fix wrt shoot div
+  margin: 0;
+  top: 50%;
+  right: 50%;
+  transform: translate(0%, -50%);
+  height: 2px;
+  background: var(--green);
+}
+
+.stem .shoot:nth-child(2n) .petiole {
+  left: 50%;
+}
+
+/* --- Leaf --- */
+.stem .leaf {
+  width: 200px;
+  height: 150px;
+  background: #d9f1b5; /*E3FFCB*/
+  border: 2px solid var(--green);
+  border-radius: 150px 0;
+  position: absolute; // fix wrt shoot div
+  margin: 0;
+  top: 50%;
+  right: 50%;
+  transform: translate(-30%, -70%) rotate(-130deg);
+}
+
+.stem .shoot:nth-child(2n) .leaf {
+  left: 50%;
+  transform: translate(30%, -70%) rotate(20deg);
+}
+
+.stem .leaf-content-title {
+  width: 75%;
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  right: 50%;
+  transform: translate(-45%, -90%);
+  text-align: center;
+  h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #84ac4c;
+  }
+}
+
+.stem .shoot:nth-child(2n) .leaf-content-title {
+  left: 50%;
+  transform: translate(45%, -80%);
+}
+
+.stem .leaf-content-company {
+  width: 40%;
+  position: absolute; // fix wrt shoot div
+  margin: 0;
+  top: 50%;
+  right: 50%;
+  transform: translate(85%, -60%);
+}
+
+.stem .shoot:nth-child(2n) .leaf-content-company {
+  left: 50%;
+  transform: translate(-85%, -60%);
+}
+
+/* --- The details --- */
+.stem .details {
+  width: 50%;
+  padding: 0 30px 0 30px;
+  float: right;
+  h3 {
+    font-size: 15px;
+    margin: 0;
+    font-weight: 600;
+    color: var(--dark-gray);
+  }
+  p {
+    margin: 0;
+    padding-top: 10px;
+    span {
+      color: var(--blue);
+      font-weight: 700;
+    }
+  }
+}
+
+.stem .shoot:nth-child(2n) .details {
+  float: left;
+  text-align: right
+}
+
+#location .text {
+  position: absolute;
+  visibility: hidden;
+  }
+  
+#location:hover .text {
+visibility: visible;
+color: var(--pink);
+font-weight: 700;
+font-size: 14.5px;
+margin-top: 5px;
+width: 150%;
+text-align: center;
+left: -20px;
+}
+
+/*#################
+  Education section
+  #################*/
+.flip-card {
+  background-color: transparent;
+  width: 315px;
+  height: 350px;
+  perspective: 1000px; // 3D effect
+  &:hover .flip-card-inner {
+    transform: rotateY(-180deg);
+  }
+}
+
+.flip-card-inner { 
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; // Safari
+  backface-visibility: hidden;
+}
+
+/* Style the front side */
+.flip-card-front {
+  background-color: white;
+  text-align: center;
+  border-radius: 20%;
+  padding-top:20px;
+  padding-bottom: 20px;
+  h1 {
+    color: var(--dark-gray);
+    font-size: 17px;
+    font-weight: 700;
+  }
+  img {
+    max-height:50%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  h2 {
+    color: var(--dark-gray);
+    font-size: 15px;
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+  ul {
+    font-size: 15px;
+    text-align: left;
+  }
+  span {
+    font-weight: 700;
+  }
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: white;
+  border-radius: 20%;
+  transform: rotateY(180deg);
+  padding-top:20px;
+  h1 {
+    color: var(--dark-gray);
+    font-size: 17px;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 15px;
+  }
+  ul {
+    font-size: 15px;
+    width: 79%;
+    padding-left:70px;
+  }
+  .red-line {
+    margin: 5px 0 5px 0;;
+    height: 2px;
+    background: repeating-linear-gradient(
+      to right,#990000 0,#990000 10px,transparent 10px,transparent 12px
+      );
+  }
+  .blue-line {
+    margin: 5px 0 5px 0;;
+    height: 2px;
+    background: repeating-linear-gradient(
+      to right,#011F5B 0,#011F5B 10px,transparent 10px,transparent 12px
+      );
+  }
+}
+
+/*###############
+  Hobbies section
+  ###############*/
+#hobbies .row {
+  padding: 0 100px;
+  .horizontal-line {
+    width: 100%;
+    position: relative;
+    margin: 20px;
+    top: -15px;
+    height: 3px;
+    background: #9e6b3b9a//#dee2e6;
+  }
+  .vertical-line {
+    width: 25%;
+    max-height: 250px;
+    position: relative;
+    float: left;
+    margin-top: 0;
+    text-align: center;
+    &:before {
+      content: "";
+      display: block;
+      width: 2px;
+      height: 50px;
+      background: var(--green);
+      margin: 0 auto;
+      position: absolute;
+      top: -35px;
+      left: 0;
+      right: 0
+    }
+  }
+}
+
+.hobbies-icon {
+  color: var(--blue);
+  margin: -70px 0 40px;
+  z-index: 1;
+  position: relative;
+}
+
+#hobbies {
+  .flip-card {
+    margin-top: -10px;
+    margin-left: 12.5%;
+    padding: 0px;
+    width: 75%;
+  }
+  .flip-card-inner {
+    width: 100%;
+    height: 75%;
+    position: relative;
+    transition: transform 0s;
+  }
+  .flip-card-front {
+    background-color: transparent;
+    img {
+      max-height: 100%;
+      max-width: 100%;
+      margin-top: 0;
+      border-radius: 20%;
+    }
+  }
+  .flip-card-back {
+    background-color: transparent;
+    width: 110%;
+    left: -5%;
+    p {
+      font-size: 15px;
+      padding-top: 10px;
+      span {
+        color: var(--blue);
+        font-weight: 700;
+      }
+    }
+    .btn-primary {
+      color: white !important;
+      background-color: var(--blue) !important;
+      border-radius: 30%;
+      padding: 10px !important;
+      font-size: 15px !important;
+      text-transform: unset !important;
+    }
+  }
+}

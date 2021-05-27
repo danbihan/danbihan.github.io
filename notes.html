@@ -1,0 +1,88 @@
+---
+layout: default
+title: Notes
+---
+
+<!-- Hero -->
+<section id="hero" class="d-flex align-items-center">
+  <div class="container" style="padding-top: 40px">
+    <h1>What did you learn today?</h1>
+    <p>
+      I learn something new everyday... except I forget most of them by tomorrow.<br />
+      Below are my notes to help me remember the things learnt today.
+    </p>
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- Notes & ToC -->
+<section>
+  <div class="container d-flex d-flex-wrap wide notes">
+
+    <!-- Notes by subjects -->
+    <div class="notes-by-subjects">
+      {% for hash in site.notes_dir %}
+        {% assign subject = hash[0] %}
+        <div class="subject" id="{{ subject }}">
+          {% assign icon_index = forloop.index | minus: 1 %}
+          <h1>{{ site.notes_icon[icon_index] }} {{ subject | replace: '_', ' ' }}</h1>
+
+          <div class="accordion" id="notes">
+            {% for topic in hash[1] %}
+              {% assign heading = "heading" | append: forloop.index | append: subject %}
+              {% assign collapse = "collapse" | append: forloop.index | append: subject %}
+
+              <div class="card">
+                
+                <button id="{{ heading }}" class="btn btn-link" type="button" data-toggle="collapse" data-target="#{{ collapse }}" aria-expanded="true" aria-controls="{{ collapse }}">
+                  {{ topic | replace: '_', ' ' | capitalize }}
+                </button>
+                
+                <div id="{{ collapse }}" class="collapse" aria-labelledby="{{ heading }}" data-parent="#notes">
+                  <table class="table">
+                    <tbody>
+                      {% for post in site.posts %}
+                        {% if post.categories contains topic %}
+                          <tr>
+                              <td><a href="{{ post.url }}"><i class="fas fa-chevron-right"></i>&#09;{{ post.title }}</a></td>
+                          </tr>
+                        {% endif %}
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            {% endfor %}
+          </div>
+    
+        </div>
+      {% endfor %}
+    </div>
+
+  <div class="toc-index-container">
+    <div class="toc">
+      <i class="fas fa-thumbtack"></i><br>
+      <h1>All subjects</h1>
+      <ul class="toc">
+        {% for hash in site.notes_dir %}
+          {% assign subject = hash[0] | replace: '_', ' ' %}
+          <li><a href="#{{ subject }}">{{ subject }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  </div>
+</section>
+
+
+
+
+
+
