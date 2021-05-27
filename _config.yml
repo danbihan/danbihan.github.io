@@ -2,7 +2,7 @@
 title: DanBi Han
 description: DanBi Han's personal website
 baseurl:  /
-url: https://danbihan.github.io/ #http://localhost:4000/ # 
+url: http://localhost:4000/ # https://danbihan.github.io/
 
 #--- Notes ---#
 # dictionary showing how notes are organized

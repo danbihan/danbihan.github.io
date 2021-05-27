@@ -22,23 +22,10 @@
   }
 }
 
-/*--- Scrolled down ---*/
-.nav-link.scrolled {
-  color: #00000080 !important;
-  &:hover {
-    color: #6b6d70 !important;
-  }
-}
-
-.navbar-brand.scrolled {
-  color: #000000e6 !important;
-}
-
-.active.scrolled {
-  color: #000000e6 !important;
-  &:hover {
-  color: #6b6d70 !important;
-  }
+/*--- Scrolled down ---*/ //eae2d8
+.navbar.scrolled {
+  background: #2D2A2C;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 50%) !important;
 }
 
 /*##########
@@ -114,8 +101,7 @@ body {
   ToC
   ###*/
 .toc {
-  background-color: #D99C5F;
-  height: fit-content;
+  background-color: #F5E691; //fcdbdd
   padding: 1rem 2rem;
   height: fit-content;
   margin-top: 35px;
@@ -130,13 +116,13 @@ body {
     text-align: left;
     margin-top: 0;
     a {
-      color: white;
+      color: black;
       font-size: 17px;
     }
   }
 }
 
-.toc-index-container {
+.toc-container {
   flex: 0 1 280px;
   position: sticky;
   top: 60px;
