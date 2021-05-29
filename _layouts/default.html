@@ -29,17 +29,27 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" 
     >
 
+    <!-- ToC Bootstrap plugin -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+    >
+
     <!--  Custom CSS -->
-    {% if page.title == "Home" %}
+    {% if page.section == "Home" %}
       <link rel="stylesheet" href="/assets/css/style_home.css">
-    {% elsif page.title == "Notes" %}
+    {% elsif page.section == "Notes" %}
       <link rel="stylesheet" href="/assets/css/style_notes.css">
-    {% elsif page.title == "Projects" %}
+    {% elsif page.section == "Projects" %}
       <link rel="stylesheet" href="/assets/css/style_projects.css">
     {% endif %}
 
+    {% if page.layout == "post" %}
+      <link rel="stylesheet" href="/assets/css/style_post.css">
+    {% endif %}
+
     <!-- Tab name -->
-    <title>DanBi Han | {{ page.title }}</title>
+    <title>DanBi Han | {{ page.section }}</title>
   </head>
   
   <body>
@@ -77,25 +87,34 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- MDBootstrap for animations -->
-    <script 
-      type="text/javascript" 
-      src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"
-    ></script>
+    {% if page.layout == "post" %}
+      <!-- ToC Bootstrap plugin -->
+      <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+      
+      <!-- Custom JS for posts page -->
+      <script src="/assets/js/post.js"></script>
+      
+    {% else %}
+      <!-- MDBootstrap for animations -->
+      <script 
+        type="text/javascript" 
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"
+      ></script>
 
-    <script 
-      src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" 
-      integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" 
-      crossorigin="anonymous" 
-      referrerpolicy="no-referrer"
-    ></script>
+      <script 
+        src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" 
+        integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer"
+      ></script>
 
-    <!-- Chat.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-deferred@1.0.2/dist/chartjs-plugin-deferred.min.js"></script>
-
-    <!-- Custom JS -->
-    <script src="/assets/js/main.js"></script>
+      <!-- Chat.js -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-deferred@1.0.2/dist/chartjs-plugin-deferred.min.js"></script>
+      
+      <!-- Custom JS for home page -->
+      <script src="/assets/js/main.js"></script>
+    {% endif %}
     
   </body>
 </html>

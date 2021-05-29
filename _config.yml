@@ -9,15 +9,15 @@ url: http://localhost:4000/ # https://danbihan.github.io/
 # {subject: [subtopics]}
 notes_dir:
   mathematics: 
-    - topic1
-    - topic2
+    icon: <i class="fas fa-calculator"></i>
+    topics:
+      - topic1
+      - topic2
   statistics:
-    - topic_a
-  machine_learning: null
-
-# Icon order must match the order of subjects above
-notes_icon: [
-  <i class="fas fa-calculator"></i>,
-  <i class="fas fa-dice"></i>,
-  <i class="fas fa-robot"></i>
-]
+    icon: <i class="fas fa-dice"></i>
+    topics:
+      - topic_a
+  machine_learning: 
+    icon: <i class="fas fa-robot"></i>
+    topics:
+      - null

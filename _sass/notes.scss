@@ -50,14 +50,11 @@
   }
 }
 
-
-
 /*########
   Subjects
   ########*/
 body {
   background: radial-gradient(circle, transparent 0%, black 500%), white
-  //box-shadow: inset 0 0 100px #4d3124;
 }
 .notes {
   margin-top: 40px;
@@ -97,10 +94,10 @@ body {
   }
 }
 
-/*###
-  ToC
-  ###*/
-.toc {
+/*#######
+  Post-it
+  #######*/
+.postit {
   background-color: #F5E691; //fcdbdd
   padding: 1rem 2rem;
   height: fit-content;
@@ -122,10 +119,9 @@ body {
   }
 }
 
-.toc-container {
+.postit-container {
   flex: 0 1 280px;
   position: sticky;
   top: 60px;
   height: fit-content;
 }
-

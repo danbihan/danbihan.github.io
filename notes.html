@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Notes
+section: Notes
 ---
 
 <!-- Hero -->
@@ -16,24 +16,21 @@ title: Notes
 
 
 
-
-
-
-
-<!-- Notes & ToC -->
+<!-- Notes & postit -->
 <section>
-  <div class="container d-flex d-flex-wrap wide notes">
+  <div class="container d-flex d-flex-wrap notes">
 
     <!-- Notes by subjects -->
     <div class="notes-by-subjects">
       {% for hash in site.notes_dir %}
         {% assign subject = hash[0] %}
+        {% assign subject_hash = hash[1] %}
+
         <div class="subject" id="{{ subject }}">
-          {% assign icon_index = forloop.index | minus: 1 %}
-          <h1>{{ site.notes_icon[icon_index] }} {{ subject | replace: '_', ' ' }}</h1>
+          <h1>{{ subject_hash["icon"] }} {{ subject | replace: '_', ' ' }}</h1>
 
           <div class="accordion" id="notes">
-            {% for topic in hash[1] %}
+            {% for topic in subject_hash["topics"] %}
               {% assign heading = "heading" | append: forloop.index | append: subject %}
               {% assign collapse = "collapse" | append: forloop.index | append: subject %}
 
@@ -65,11 +62,11 @@ title: Notes
       {% endfor %}
     </div>
 
-  <div class="toc-container">
-    <div class="toc shadow">
+  <div class="postit-container">
+    <div class="postit shadow">
       <i class="fas fa-thumbtack"></i><br>
       <h1>All subjects</h1>
-      <ul class="toc">
+      <ul class="postit">
         {% for hash in site.notes_dir %}
           {% assign subject = hash[0] | replace: '_', ' ' %}
           <li><a href="#{{ subject }}">{{ subject }}</a></li>
@@ -80,9 +77,3 @@ title: Notes
 
   </div>
 </section>
-
-
-
-
-
-

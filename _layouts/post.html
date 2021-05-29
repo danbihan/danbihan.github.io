@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<!-- Header -->
+<section>
+  {% assign subject = page.categories[1] %}
+  {% assign subject_hash = site.notes_dir[subject] %}
+
+  <div class="header">
+    <div class="container">
+      
+      <h1>
+        <span class="top">{{ subject_hash["icon"] }} {{ subject }}</span>
+        {{ page.title }}
+        <span class="bottom">{{ page.categories[2] | replace: "_", " " }}</span>
+      </h1>
+      
+    </div>
+  </div>
+</section>
+
+<!-- ToC & Notes -->
+<section>
+  <div class="container d-flex d-flex-wrap">
+
+    <div class="w3-sidebar w3-bar-block shadow">
+      <nav id="toc" class="sticky-top"></nav>
+    </div>
+  
+    <div class="actual-notes">
+      {{ content }}
+    </div>
+
+  </div>
+</section>
