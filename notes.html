@@ -36,8 +36,8 @@ section: Notes
 
               <div class="card">
                 
-                <button id="{{ heading }}" class="btn btn-link" type="button" data-toggle="collapse" data-target="#{{ collapse }}" aria-expanded="true" aria-controls="{{ collapse }}">
-                  {{ topic | replace: '_', ' ' | capitalize }}
+                <button id="{{ heading }}" class="topic btn btn-link" type="button" data-toggle="collapse" data-target="#{{ collapse }}" aria-expanded="true" aria-controls="{{ collapse }}">
+                  {{ topic | replace: '_', ' ' }}
                 </button>
                 
                 <div id="{{ collapse }}" class="collapse" aria-labelledby="{{ heading }}" data-parent="#notes">

@@ -4,9 +4,18 @@ description: DanBi Han's personal website
 baseurl:  /
 url: http://localhost:4000/ # https://danbihan.github.io/
 
+#--- Markdown ---#
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  extensions: fenced_code_blocks
+
 #--- Notes ---#
 # dictionary showing how notes are organized
 # {subject: [subtopics]}
+# Be sure to have these names match the actual directory names!
 notes_dir:
   mathematics: 
     icon: <i class="fas fa-calculator"></i>
@@ -20,4 +29,5 @@ notes_dir:
   machine_learning: 
     icon: <i class="fas fa-robot"></i>
     topics:
-      - null
+      - coursera_ML
+      - stanford_CS_229

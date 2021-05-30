@@ -46,6 +46,7 @@
 
     {% if page.layout == "post" %}
       <link rel="stylesheet" href="/assets/css/style_post.css">
+      <link rel="stylesheet" href="/assets/css/style_code.css">
     {% endif %}
 
     <!-- Tab name -->
@@ -91,9 +92,13 @@
       <!-- ToC Bootstrap plugin -->
       <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
       
+      <!-- MathJax -->
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
       <!-- Custom JS for posts page -->
       <script src="/assets/js/post.js"></script>
-      
+
     {% else %}
       <!-- MDBootstrap for animations -->
       <script 
