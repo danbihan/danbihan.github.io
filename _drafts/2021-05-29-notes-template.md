@@ -3,6 +3,7 @@ layout: post
 section: Notes
 title:  "Notes Template"
 permalink: /notes/:title
+img_path: \static\study_notes\subject\subtopic\
 ---
 
 ## Formatting text
@@ -85,7 +86,7 @@ $$
 ## Others
 ### Indentation
 
-Use 5 nonbreaking white spaces to indent when needed: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`
+Use 8 nonbreaking white spaces to indent to the first bullet when needed: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`
 
 ### Images
 To include images, use the following syntax: `![img description](path\to\image.png)`  

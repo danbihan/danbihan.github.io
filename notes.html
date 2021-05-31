@@ -43,7 +43,7 @@ section: Notes
                 <div id="{{ collapse }}" class="collapse" aria-labelledby="{{ heading }}" data-parent="#notes">
                   <table class="table">
                     <tbody>
-                      {% for post in site.posts %}
+                      {% for post in site.posts reversed %}
                         {% if post.categories contains topic %}
                           <tr>
                               <td><a href="{{ post.url }}"><i class="fas fa-chevron-right"></i>&#09;{{ post.title }}</a></td>

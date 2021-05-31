@@ -69,7 +69,7 @@ $$
 
 - The **gradient descent algorithm**:
   - Repeat until convergence {\\
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     $$\boxed{\theta_j := \theta_j-\alpha\frac{\partial}{\partial\theta_j}J(\theta_0,\theta_1)}$$\\
     }
   - Be sure to <mark>simultaneously update all parameters</mark> at each $$j^{th}$$ iteration (or else you are using non-matching parameters to calculate your partials):
@@ -85,11 +85,18 @@ $$
 <img-cred>Andrew Ng | Coursera</img-cred>
 
 - Gradient descent for linear regression:
-<img src="{{ page.img_path }}gr_linear_reg.png" height="150">
-<img-cred>Andrew Ng | Coursera</img-cred>
+
+$$
+\begin{aligned}
+  &\small\text{Repeat until convergence} \normalsize\{\\
+    &\theta_j := \theta_j-\alpha\frac{1}{m}\sum_{i=1}^m\left[(h_{\theta}(x_i)-y_i)x_i\right]\\
+  &\}
+\end{aligned}
+$$
+
   - Reminders:
     - $$m$$ = size of training set
-    - $$\theta_0$$ updates simultaneously with $$\theta_0$$
+    - $$\theta_0$$ updates simultaneously with $$\theta_1$$
     - $$x_i, y_i$$ = values of the training set (aka the data)
   - Start with a guess for our hypothesis $$\rightarrow$$ repeatedly apply the gradient descent equation $$\rightarrow$$ our hypothesis will become more and more accurate
 
@@ -145,7 +152,7 @@ $$
 ***
 
 ## Normal equation
-Gradient descent gives one way of minimizing the cost function, $$J$$. The normal equation is another minimization method, where we can <mark>explicitly solve for the optimum</mark> without depending on an iterative algorithm.
+Gradient descent gives one way of minimizing the cost function, $$J$$. The normal equation is another minimization method, where we can <mark>explicitly solve for the optimum</mark> without depending on an iterative algorithm:
 
 $$
 \begin{equation}
