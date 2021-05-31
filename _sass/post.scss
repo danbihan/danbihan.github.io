@@ -79,6 +79,9 @@ span.bottom {
   a.active {
     color: #9b4816c7 !important;
   }
+  li {
+    padding-top: 0;
+  }
 }
 
 nav[data-toggle=toc] {
@@ -117,10 +120,47 @@ nav[data-toggle=toc] {
     font-size: 20px;
     font-weight: 700 !important;
     padding-top: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+ul li.first:first-child {
+  padding-top: 0;
+}
+
+li {
+  padding-top: 10px;
+  &:first-child {
+    padding-top: 0;
+  }
+  ul > li {
+      padding-top: 0;
+  }
+}
+
+img {
+  max-height: 200px;
+  display: block;
+  margin: auto;
+}
+
+img-cred {
+  color: gray;
+  font-style: italic;
+  font-size: 12px;
+  display: block;
+  text-align: center;
+  padding-top: 10px;
+  &:before {
+    content:"Image credit: ";
   }
 }
 
 /* Markdown */
 mark {
   background-color: #FFF2CC;
+}
+
+strong {
+  font-weight: bold;
 }

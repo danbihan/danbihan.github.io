@@ -82,5 +82,17 @@ $$
 
 ***
 
-## Resources
+## Others
+### Indentation
+
+Use 5 nonbreaking white spaces to indent when needed: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`
+
+### Images
+To include images, use the following syntax: `![img description](path\to\image.png)`  
+
+To manually size the image, use the HTML syntax: `<img src="{{ page.img_path }}gradient_desc_update.png" width="200">`  
+
+To credit the iamge, use the `img-cred` tag.
+
+### Resources
 For more Markdown features, [click here](https://guides.github.com/features/mastering-markdown/).
