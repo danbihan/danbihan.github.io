@@ -55,10 +55,10 @@ $$
   - Thus, we can conclude:
 
 $$
-\begin{equation}
+\begin{aligned}
   \theta^Tx \geq 0 \rightarrow y=1\\
-  \theta^Tx <> 0 \rightarrow y=0
-\end{equation}
+  \theta^Tx < 0 \rightarrow y=0
+\end{aligned}
 $$
 
 - **Decision boundary** = the line that separates the areas where $$y=0$$ vs $$y=1$$
@@ -109,7 +109,7 @@ $$
 
 $$
 \begin{aligned}
-  h &= g(X\theta)\\
+  h &= g(X\theta)\\[5pt]
   J(\theta) &= \frac{1}{m}\left(-y^T\log(h_{sigmoid})-(1-y)^T\log(1-h_{sigmoid})\right)
 \end{aligned}
 $$
