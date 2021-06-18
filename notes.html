@@ -44,7 +44,7 @@ section: Notes
                   <table class="table">
                     <tbody>
                       {% for post in site.posts reversed %}
-                        {% if post.categories contains topic %}
+                        {% if post.categories contains topic and post.categories contains subject %}
                           <tr>
                               <td><a href="{{ post.url }}"><i class="fas fa-chevron-right"></i>&#09;{{ post.title }}</a></td>
                           </tr>

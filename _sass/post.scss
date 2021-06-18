@@ -160,6 +160,23 @@ img-cred {
   }
 }
 
+.source {
+  color: gray;
+  font-style: italic;
+  font-size: 12px;
+  &:before {
+    content:"Source: ";
+  }
+}
+
+.row {
+  margin-bottom: 1rem;
+}
+
+.table thead th {
+  padding-left: 40px;
+}
+
 /* Markdown */
 mark {
   background-color: #FFF2CC;

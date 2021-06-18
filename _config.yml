@@ -2,7 +2,8 @@
 title: DanBi Han
 description: DanBi Han's personal website
 baseurl:  /
-url: http://localhost:4000/ # https://danbihan.github.io/
+url: https://danbihan.github.io/
+#url: http://localhost:4000/
 
 #--- Markdown ---#
 highlighter: rouge
@@ -15,7 +16,7 @@ kramdown:
 #--- Notes ---#
 # dictionary showing how notes are organized
 # {subject: [subtopics]}
-# Be sure to have these names match the actual directory names!
+# Be sure to have these names exactly match the actual directory names!
 notes_dir:
   mathematics: 
     icon: <i class="fas fa-calculator"></i>
@@ -31,3 +32,11 @@ notes_dir:
     topics:
       - coursera_ML
       - stanford_CS_229
+  data_science_interview_prep:
+    icon: <i class="fas fa-briefcase"></i>
+    topics:
+      - coding
+  others:
+    icon: <i class="fas fa-umbrella"></i>
+    topics: 
+      - devOps
