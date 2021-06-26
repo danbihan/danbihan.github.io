@@ -2,8 +2,8 @@
 title: DanBi Han
 description: DanBi Han's personal website
 baseurl:  /
-url: https://danbihan.github.io/
-#url: http://localhost:4000/
+#url: https://danbihan.github.io/
+url: http://localhost:4000/
 
 #--- Markdown ---#
 highlighter: rouge
@@ -32,11 +32,12 @@ notes_dir:
     topics:
       - coursera_ML
       - stanford_CS_229
-  data_science_interview_prep:
-    icon: <i class="fas fa-briefcase"></i>
-    topics:
-      - coding
+  # data_science_interview_prep:
+  #   icon: <i class="fas fa-briefcase"></i>
+  #   topics:
+  #     - coding
   others:
     icon: <i class="fas fa-umbrella"></i>
     topics: 
+      - data_science_interview_prep
       - devOps
