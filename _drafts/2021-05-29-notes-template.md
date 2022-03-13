@@ -25,10 +25,12 @@ Bulleted lists can be created using hyphens:
   - Subitem 1
     - Sub-subitem 1
 
-Listst can also be ordered:
+Listst can also be ordered (note the double indentation):
 1. Item 1
 2. Item 2
-  1. Subitem 1
+    1. Subitem 1
+
+To write something between bullets or numbered lists while preserving the hierarchy, indent the something.
 
 ### Centering 
 To center text, wrap it around using `<p align="center">...</p>`:  
@@ -51,7 +53,7 @@ print(var)
 
 ## Formatting equations
 To write multiple lines of equations, use double `$$` with `\begin{align}`. Be sure to include an empty line above:  
-
+[this should be an empty line]
 $$
 \begin{align}
   \frac{1}{2} + x &= \frac{3}{2} \\
@@ -60,7 +62,6 @@ $$
 $$
 
 To increase the vertical spacing between the equations, add `[#pt]` at the end of the line:
-
 $$
 \begin{aligned}
   \frac{1}{2} + x &= \frac{3}{2} \\[10pt]
@@ -68,8 +69,14 @@ $$
 \end{aligned}
 $$
 
-To box equations, use `\boxed{}`:
+To have extra space around text within the align environment, use `\quad`:
+$$
+\begin{aligned}
+  x + y =3 \quad\text{ word }\quad for x \in {1, 2, 3}
+\end{aligned}
+$$
 
+To box equations, use `\boxed{}`:
 $$\boxed{u=1}$$
 
 $$
@@ -83,15 +90,50 @@ $$
 \end{equation}
 $$
 
+To have a down arrow with text, use the `equation` environments, followed by the `aligned` environment. Don't forget to add `[10pt]` to the end of the previous equation, too (_see Coursera ML: classification or neural network for examples_):
+$$
+\begin{equation}
+  first equation\\[10pt]
+\end{equation}
+$$
+
+$$
+\begin{equation}
+  \downarrow \small\text{vectorized}\\[10pt]
+\end{equation}
+$$
+
+$$
+\begin{aligned}
+  second equation
+\end{aligned}
+$$
+
+### Mathematical notations
+Here are some commonly used (and confusing) notations in LaTex:
+- Expectation: \mathbb{E}
+- Probability: \mathbb{P}
+- Multiplication dot: \cdot
+- Matrix: 
+  \begin{bmatrix}
+    a & b\\
+    c & d
+  \end{bmatrix}
+- Brace: 
+  \begin{cases}
+    case1\\
+    case2
+  \end{cases}
+
 ***
 
 ## Others
 ### Indentation
 
-Use 8 nonbreaking white spaces to indent to the first bullet when needed: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`
+Use 8 nonbreaking white spaces to indent to the first bullet when needed: `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `
 
 ### Images
-To include images, use the following syntax: `![img description](path\to\image.png)`  
+To include images, use the following syntax: `![img description]({{ page.img_path }}image.png)`  
 
 To manually size the image, use the HTML syntax: `<img src="{{ page.img_path }}gradient_desc_update.png" width="200">`  
 

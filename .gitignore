@@ -3,3 +3,4 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+ubuntu-bionic-18.04-cloudimg-console.log

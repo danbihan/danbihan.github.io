@@ -28,7 +28,7 @@ img_path: \static\study_notes\machine_learning\coursera_ML\
 - Applications:
   - Organize large computer clusters (i.e. which machines tend to work together)
   - Social network analysis (i.e. which groups of people all know each other)
-  - Market segmentation (ie.e. group customers)
+  - Market segmentation (i.e. group customers)
     
 ***
 
@@ -89,7 +89,8 @@ $$
 $$
 \begin{aligned}
   &\small\text{Repeat until convergence} \normalsize\{\\
-    &\theta_j := \theta_j-\alpha\frac{1}{m}\sum_{i=1}^m\left[(h_{\theta}(x_i)-y_i)x_i\right]\\
+    &\theta_0 := \theta_0-\alpha\frac{1}{m}\sum_{i=1}^m\left[(h_{\theta}(x_i)-y_i)\right]\\
+    &\theta_1 := \theta_1-\alpha\frac{1}{m}\sum_{i=1}^m\left[(h_{\theta}(x_i)-y_i)\cdot x_i\right]\\
   &\}
 \end{aligned}
 $$
@@ -106,14 +107,32 @@ $$
 
 ## Multivariate linear regression
 - Hypothesis function with multiple features:
-<img src="{{ page.img_path }}multiple_reg1.png" height="40">
-<img src="{{ page.img_path }}multiple_reg2.png" height="100">
-<img-cred>Andrew Ng | Coursera</img-cred>
+
+$$h_{\theta}(x) = \theta_{0}+\theta_{1}x_1+...+\theta_{n}x_n$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; whose vectorized form looks like:
+
+$$
+  h_{\theta}(x) = \begin{bmatrix}\theta_{0} & \theta_{1} & ... & \theta_{n}\end{bmatrix}
+  \begin{bmatrix}
+  x_0\\
+  x_1\\
+  ...\\
+  x_n
+  \end{bmatrix}
+$$
 
 - Gradient descent for multivariate:
-<img src="{{ page.img_path }}multiple_reg_gr.png" height="100">
-<img-cred>Andrew Ng | Coursera</img-cred>
-  - $$x_0^{(i)}=1$$ (aka the intercept)
+
+$$
+\begin{aligned}
+  &\small\text{Repeat until convergence} \normalsize\{\\
+    &\theta_j := \theta_j-\alpha\frac{1}{m}\sum_{i=1}^m\left[(h_{\theta}(x^{(i)})-y^{(i)})\cdot x_j^{(i)}\right]\quad\text{ for }\quad j:= 0, ..., n\\
+  &\}
+\end{aligned}
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; where $$x_0^{(i)}=1$$ (aka the intercept)
 
 ### Speeding up gradient descent
 - We can speed up gradient descent by having each of our input values in roughly the same range
@@ -121,7 +140,7 @@ $$
 - Two techniques to help put variables roughly in the same range:
   - **Feature scaling** = $$\frac{\text{input values}}{\text{range of the input variable}} \rightarrow \text{new range} = 1 $$ 
     - Instead of range, standard deviation is often used
-  - **Mean normalization** = $$\text{input values} - \text{avg} \rightarrow \text{new range} = 0$$ 
+  - **Mean normalization** = $$\text{input values} - \text{avg} \rightarrow \text{new avg} = 0$$ 
     - Putting them together:
 
 $$
@@ -141,7 +160,7 @@ $$
 
 - Summary
   - $$\alpha$$ is too small $$\rightarrow$$ slow convergence
-  - $$\alpha$$ is too large $$\rightarrow$$ error may not decrease on every iteration and thus the algorithm might not converge
+  - $$\alpha$$ is too large $$\rightarrow$$ error may not decrease on every iteration, and thus, the algorithm might not converge
 
 ### Polynomial regression
 - We can change the behavior of our curve by...

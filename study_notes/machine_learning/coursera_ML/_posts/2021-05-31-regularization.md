@@ -27,11 +27,15 @@ img_path: \static\study_notes\machine_learning\coursera_ML\
 ## Regularization
 - When we have overfitting, we can reduce the magnitude of our parameters by <mark>increasing the cost of those parameters</mark>
   - *Ex*: We want to make the following function more quadratic:
-<img src="{{ page.img_path }}reg1.png" height="40">
-<img-cred>Andrew Ng | Coursera</img-cred>
+
+$$\theta_0+\theta_1x+\theta_2x^2+\theta_3x^3+\theta_4x^4$$
+
   - To reduce the influence of $$\theta_3x^3$$ and $$\theta_4x^4$$, modify the cost function:
-<img src="{{ page.img_path }}reg2.png" height="45">
-<img-cred>Andrew Ng | Coursera</img-cred>
+
+$$
+\min_{\theta} \frac{1}{2m}\sum_{i=1}^m (h_{\theta}(x^{(i)})-y^{(i)})^2 + 1000\cdot \theta_3^2 + 1000\cdot \theta_4^2
+$$
+
   - Result: The function (pink) looks more quadratic but fits the data better than just a simple quadratic equation
 <img src="{{ page.img_path }}reg3.png">
 <img-cred>Andrew Ng | Coursera</img-cred>
@@ -44,7 +48,7 @@ img_path: \static\study_notes\machine_learning\coursera_ML\
 
 ### Linear regression
 - Cost function with regularization:
-  - Notice: the intercept term (j=0) is not penalized
+  - Notice: the intercept term ($$j=0$$) is not penalized
 
 $$
 \begin{equation}
@@ -59,7 +63,9 @@ $$
 
 $$
 \begin{equation}
-  \theta_j := \theta_j(1-\alpha\frac{\lambda}{m})-\alpha\frac{1}{m}\sum_{i=1}^m\left[h(x^{(i)})-y^{(i)}\right]x_j^{(i)}
+  \boxed{
+    \theta_j := \theta_j\left(1-\alpha\frac{\lambda}{m}\right)-\alpha\frac{1}{m}\sum_{i=1}^m\left[h(x^{(i)})-y^{(i)}\right]x_j^{(i)}
+  }
 \end{equation}
 $$
 

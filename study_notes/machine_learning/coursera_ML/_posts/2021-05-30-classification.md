@@ -11,11 +11,11 @@ img_path: \static\study_notes\machine_learning\coursera_ML\
   - 0 = negative class
   - 1 = positive class
 
-- **Label** = the $$y^(i)$$ that corresponds to a given sample of $$x^(i)$$ features
+- **Label** = the $$y^{(i)}$$ that corresponds to a given sample of $$x^{(i)}$$ features
 
 ### Hypothesis representation
 - Since the y-values are discrete, we know that our hypothesis must satisfy $$0\leq h(x)\leq 1$$
-  - This is accomplished by pluggin $$h(x)=\theta^Tx$$ into the **logistic function**, aka **sigmoid function**:
+  - This is accomplished by plugging $$h(x)=\theta^Tx$$ into the **logistic function**, aka **sigmoid function**:
 
 $$
 \begin{equation}
@@ -61,7 +61,7 @@ $$
 \end{aligned}
 $$
 
-- **Decision boundary** = the line that separates the areas where $$y=0$$ vs $$y=1$$
+- **Decision boundary** = the line that separates the areas where $$y=0$$ vs. $$y=1$$
   - This boundary is created by our hypothesis function
 
 ***
